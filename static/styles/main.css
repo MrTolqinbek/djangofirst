@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo img {
+  width: 100px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 100px;
+  box-shadow: 2px 0 20px 7px rgb(240, 154, 154);
+  background-color: rgb(252, 252, 252);
+}
+header .head {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(192, 1, 1);
+  text-shadow: 0 0 10px rgb(228, 21, 21);
+}

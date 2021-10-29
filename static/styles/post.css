@@ -1,0 +1,54 @@
+.post {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.image {
+  width: 400px;
+  margin: 60px auto;
+}
+.post > div:last-child {
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+.image img {
+  width: 100%;
+}
+.div {
+  padding: 10px 20px;
+}
+.div .title {
+  font-size: 27px;
+  padding: 20px;
+  text-align: center;
+}
+.div .summary {
+  font-size: 20px;
+  color: rgb(66, 70, 70);
+}
+.emoji {
+  font-size: 30px;
+  display: flex;
+  margin: 20px 0 0 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.emoji > div {
+  width: 80px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+}
+.post .title a {
+  text-decoration: none;
+  color: rgb(255, 96, 48);
+}
+.emoji > div i {
+  color: rgb(0, 220, 190);
+}
+.emoji > form i {
+  color: rgb(218, 8, 8);
+}

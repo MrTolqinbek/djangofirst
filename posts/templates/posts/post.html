@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+
+{% load static %}
+{% block stylesandtitle %}
+<title>
+    {{post.title}}
+</title>
+<link rel="stylesheet" href="{% static 'styles/post.css' %}">
+{% endblock stylesandtitle %}
+<title>{{post.title}</title>
+{% block content %}
+
+<div class="post">
+    <div class="image">
+        <img src="{% static post.image.url %}" alt="image">
+    </div>
+    <div class="div">
+        <div class="title">
+            {{post.title}}
+        </div>
+        <div class="summary">
+            {{post.summary}}
+        </div>
+        <div class="emoji">
+            <div>
+                <i class="fas fa-eye"></i> {{post.views}}
+            </div>
+            <form action="likes" method="POST">
+                {% csrf_token %}
+                <div class="button">
+                    <i class="fas fa-heart"></i> {{post.likes}}
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script>
+    const a = document.querySelector('.button')
+    const like = document.querySelector('.emoji form')
+    a.addEventListener('click', () => {
+        like.submit()
+    })
+</script>
+{% endblock scripts %}s
